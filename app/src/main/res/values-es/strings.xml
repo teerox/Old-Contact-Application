@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">" Aplicación de contacto"</string>
+    <string name="forgot_password">" ¿Se te olvidó tu contraseña?"</string>
+    <string name="login">" Iniciar sesión"</string>
+    <string name="password">" Contraseña"</string>
+    <string name="sign_up">" Ingresa con e-mail"</string>
+    <string name="username">" Nombre de usuario"</string>
+    <string name="address">" Habla a"</string>
+    <string name="email">" Email"</string>
+    <string name="cancel">" Cancelar"</string>
+    <string name="name">" Nombre"</string>
+    <string name="phone_number">Número de teléfono</string>
+    <string name="save">" Salvar"</string>
+</resources>

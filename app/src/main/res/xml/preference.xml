@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory android:title="General">
+        <EditTextPreference
+            android:defaultValue="Block Contacts"
+            android:key="block_number"
+            android:summary="Block Contacts"
+            android:title="Block Number" />
+
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="auto_answer"
+            android:summary="Allow Auto Answer"
+            android:title="Auto Answer" />
+
+        <ListPreference
+            android:defaultValue="3"
+            android:dialogTitle="Font Size"
+            android:entries="@array/font_size"
+            android:entryValues="@array/font_size_values"
+            android:key="font_size"
+            android:summary="Specific text size"
+            android:title="Font Size"/>
+
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="@string/pref_title_notifications">
+
+        <SwitchPreference
+            android:defaultValue="false"
+            android:key="night_mood"
+            android:title="Night Mood" />
+        <SwitchPreference
+            android:defaultValue="false"
+            android:key="show_pop_up"
+            android:summary="show on going calls in a pop-up instead of full screen while using other apps"
+            android:title="Show calls in pop-up" />
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="@string/pref_header_about">
+
+        <Preference
+            android:selectable="false"
+            android:summary="Summary about this app" />
+
+        <Preference
+            android:summary="@string/app_version"
+            android:title="@string/title_version" />
+
+        <Preference
+            android:key="send_feedback"
+            android:summary="@string/summary_support"
+            android:title="@string/title_send_feedback" />
+
+        <!-- preference opens url in browser -->
+        <Preference
+            android:summary="@string/summary_faq"
+            android:title="@string/title_faq">
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="decagonhq.com" />
+        </Preference>
+
+        <Preference android:title="@string/privacy_policy">
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="decagonhq.com" />
+        </Preference>
+
+        <Preference android:title="@string/title_terms">
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="@string/url_terms" />
+        </Preference>
+    </PreferenceCategory>
+</PreferenceScreen>

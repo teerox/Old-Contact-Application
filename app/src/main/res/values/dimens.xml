@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="width">0dp</dimen>
+
+    <dimen name="radius">30dp</dimen>
+    <dimen name="stroke">1dp</dimen>
+    <dimen name="margin_top_1">20dp</dimen>
+    <dimen name="height">45dp</dimen>
+
+</resources>

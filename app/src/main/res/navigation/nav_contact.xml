@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_contact"
+    app:startDestination="@+id/activity_recy">
+    <fragment
+        android:id="@+id/activity_recy"
+        android:name="com.example.contactapp.userInterface.FragmentContact"
+        android:label="FragmentContact"
+        tools:layout="@layout/recyler_fragment">
+        <action
+            android:id="@+id/action_nav_host_fragment_to_mainActivitySaveContact"
+            app:destination="@id/mainActivitySaveContact" />
+        <action
+            android:id="@+id/action_nav_host_fragment_to_frangmentSearch2"
+            app:destination="@id/frangmentSearch2" />
+        <action
+            android:id="@+id/action_nav_host_fragment_to_fragmentAddContact"
+            app:destination="@id/fragmentAddContact" />
+        <action
+            android:id="@+id/action_nav_host_fragment_to_fragmentFavourite"
+            app:destination="@id/fragmentFavourite" />
+        <action
+            android:id="@+id/action_activity_recy_to_fragmentDisplayContact"
+            app:destination="@id/fragmentDisplayContact"
+            app:popUpToInclusive="false" />
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/fragmentDisplayContact"
+        android:name="com.example.contactapp.userInterface.FragmentDisplayContact"
+        android:label="FragmentDisplayContact"
+        tools:layout="@layout/fragment_display_contact">
+
+        <argument
+            android:name="contact"
+            app:argType="com.example.contactapp.model.Contact" />
+    </fragment>
+    <fragment
+        android:id="@+id/frangmentSearch2"
+        android:name="com.example.contactapp.userInterface.FrangmentSearch"
+        android:label="FrangmentSearch"
+        tools:layout="@layout/fragment_search" />
+    <fragment
+        android:id="@+id/fragmentAddContact"
+        android:name="com.example.contactapp.userInterface.FragmentAddContact"
+        android:label="FragmentAddContact"
+        tools:layout="@layout/fragment_addcontact" />
+    <fragment
+        android:id="@+id/fragmentFavourite"
+        android:name="com.example.contactapp.userInterface.FragmentFavourite"
+        android:label="FragmentFavourite"
+        tools:layout="@layout/fragment_favourite" />
+    <fragment
+        android:id="@+id/mainActivitySaveContact"
+        android:name="com.example.contactapp.userInterface.MainActivitySaveContact"
+        android:label="MainActivitySaveContact"
+        tools:layout="@layout/fragment_addcontact" />
+</navigation>

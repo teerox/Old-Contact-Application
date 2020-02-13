@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    >
+
+    <data>
+        <variable
+            name="contact"
+            type="com.example.contactapp.model.Contact" />
+        <variable
+            name="name"
+            type="String" />
+    </data>
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="2"
+    >
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:layout_weight="1.3"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@drawable/untitled"
+    >
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:layout_gravity="center"
+        android:id="@+id/profileImage"
+        android:onClick="changeProfilePicture"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="30sp"
+        android:text="@{contact.names}"
+        android:id="@+id/nameContact"
+        android:textColor="@color/roundEdit"
+        android:layout_gravity="center"
+        />
+
+<!--    <Button-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:id="@+id/changeprofile"-->
+<!--        android:onClick="changeProfilePicture"-->
+<!--        android:layout_height="20dp"-->
+<!--        android:text="Change ProfilE Picture"-->
+<!--        android:background="#FFFFFF"-->
+<!--        />-->
+</LinearLayout>
+<View
+    android:layout_width="match_parent"
+    android:layout_height="1dp"
+    android:background="#CCCCCC" />
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_weight="0.7"
+    android:weightSum="3"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="horizontal"
+
+        >
+
+        <TextView
+            android:id="@+id/phoneNumberContact"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="20dp"
+            android:text="@{contact.phonenumber}"
+            android:textColor="@color/background"
+            />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="#0288D1" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:id="@+id/callbutton"
+            android:onClick="call"
+            android:background="@drawable/button_selector"
+            android:src="@drawable/ic_call_black_24dp"
+            />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:id="@+id/messagebutton"
+            android:onClick="sendMessage"
+            android:background="@drawable/button_selector"
+            android:src="@drawable/ic_message_black_24dp"/>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#CCCCCC" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{contact.email}"
+            android:id="@+id/emailContact"
+            android:textColor="@color/background"
+            />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_email_black_24dp"
+            android:onClick="sendemail"
+            android:background="@drawable/button_selector"
+            android:id="@+id/mailbutton"
+
+            />
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#CCCCCC" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_gravity="center"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:textColor="@color/background"
+            android:text="@{contact.address}"
+            android:id="@+id/addressContact"
+            />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="addressLocation"
+            android:src="@drawable/ic_home_black_24dp"
+            android:background="@drawable/button_selector"
+            android:id="@+id/addressbutton"
+            />
+
+    </LinearLayout>
+</LinearLayout>
+</LinearLayout>
+</layout>
